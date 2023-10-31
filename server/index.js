@@ -31,6 +31,14 @@ app.use(morgan("common"))
 app.use(bodyParser.json({ limit: "30mb", extended: true }))
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }))
 app.use(cors(corsOptions))
+
+/* CORS */
+const allowCrossDomain = (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', "https://friendolo.onrender.com/");
+  next();
+}
+app.use(allowCrossDomain)
+
 app.use("/assets", express.static(path.join(__dirname, "public/assets")))
 
 /* FILE STORAGE */
