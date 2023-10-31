@@ -1,0 +1,2 @@
+# Friendolo
+MERN web app
