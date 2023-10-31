@@ -34,7 +34,7 @@ app.use(cors(corsOptions))
 
 /* CORS */
 const allowCrossDomain = (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', "https://friendolo.onrender.com/");
+  res.header('Access-Control-Allow-Origin', "https://friendolo.onrender.com");
   next();
 }
 app.use(allowCrossDomain)
