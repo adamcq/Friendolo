@@ -6,7 +6,7 @@ import url from "config/url";
 
 const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts).reverse();
+  const posts = useSelector((state) => state.posts)
   const token = useSelector((state) => state.token);
 
   const getPosts = async () => {
@@ -15,6 +15,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.json();
+    data.reverse()
     dispatch(setPosts({ posts: data }));
   };
 
@@ -27,6 +28,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
       }
     );
     const data = await response.json();
+    data.reverse()
     dispatch(setPosts({ posts: data }));
   };
 
