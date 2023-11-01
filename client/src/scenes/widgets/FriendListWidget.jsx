@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
 
 const FriendListWidget = ({ userId }) => {
-  console.log(`userId widget ${userId}`)
+  // console.log(`userId widget ${userId}`)
 
   const dispatch = useDispatch();
   const { palette } = useTheme();
@@ -40,7 +40,7 @@ const FriendListWidget = ({ userId }) => {
       >
         Friend List
       </Typography>
-      {console.log(`friends widget ${friends}`)}
+      {/* {console.log(`friends widget ${friends}`)} */}
       <Box display="flex" flexDirection="column" gap="1.5rem">
         {friends.map((friend) => (
           <Friend
