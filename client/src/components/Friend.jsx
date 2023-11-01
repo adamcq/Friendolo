@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { setFriends } from "state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
+import url from "config/url";
 
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const dispatch = useDispatch();
@@ -19,12 +20,12 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
 
-  {console.log(`friends Friend ${friends}`)}
+  // {console.log(`friends Friend ${friends}`)}
   const isFriend = friends.find((friend) => friend._id === friendId);
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://friendolo-api.onrender.com/users/${_id}/${friendId}`,
+      `${url}/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

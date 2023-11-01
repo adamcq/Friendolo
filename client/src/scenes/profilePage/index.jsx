@@ -1,4 +1,5 @@
 import {Box, useMediaQuery} from '@mui/material'
+import url from 'config/url'
 import {useEffect, useState} from 'react'
 import {useSelector} from 'react-redux'
 import { useParams } from 'react-router-dom'
@@ -15,7 +16,7 @@ const ProfilePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)")
 
   const getUser = async () => {
-    const response = await fetch(`https://friendolo-api.onrender.com/users/${userId}`, {
+    const response = await fetch(`${url}/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     })

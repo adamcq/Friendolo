@@ -8,6 +8,7 @@ import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import Friend from "components/Friend";
 import WidgetWrapper from "components/WidgetWrapper";
+import url from "config/url";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
@@ -35,7 +36,7 @@ const PostWidget = ({
   const primary = palette.primary.main;
 
   const patchLike = async () => {
-    const response = await fetch(`https://friendolo-api.onrender.com/posts/${postId}/like`, { 
+    const response = await fetch(`${url}/posts/${postId}/like`, { 
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -64,7 +65,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`https://friendolo-api.onrender.com/assets/${picturePath}`}
+          src={`${url}/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">
