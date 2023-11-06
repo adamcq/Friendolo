@@ -10,7 +10,7 @@ Register or use these login credentials:\
 `Password: k`
 
 ## Remark
-The app is deployed for free, so the first login/register may take a few minutes.
+The app is deployed for free, so the first login/register may take a few seconds.
 
 ## Implemented features
 1. Register / Login
