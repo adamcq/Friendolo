@@ -4,13 +4,12 @@ MERN stack - MongoDb, express.js, react.js, node.js. \
 Deployed using a free-tier on Render.
 
 ## Check out the app
+**Disclaimer:** The first login/registration may take a minute to load. The app is deployed for free, so the server is sleeping.\
 [https://friendolo.onrender.com](https://friendolo.onrender.com/)\
 Register or use these login credentials:\
 `Email: k@k.k`\
 `Password: k`
 
-## Remark
-The app is deployed for free, so the first login/register may take a few seconds.
 
 ## Implemented features
 1. Register / Login
