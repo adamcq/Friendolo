@@ -15,6 +15,7 @@ Register or use these login credentials:\
 1. Register / Login
 2. Add / remove a friend
 3. Like / unlike a post
-4. Create a post with text or image
-5. View comments
-6. Open any user's profile
+4. Light / dark mode
+5. Create a post with text or image
+6. View comments
+7. Open any user's profile
